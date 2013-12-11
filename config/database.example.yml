@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: app_development
+  username: app
+  password: passw0rd
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: app_test
+  username: app
+  password: passw0rd
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: app_production
+  username: app
+  password: passw0rd

@@ -1,0 +1,5 @@
+%nav
+  %ul
+    = nav_link('Home', root_path)
+    = nav_link('About', '/about')
+    = if logged_in? then nav_link('Log out', logout_path) else nav_link('Log in', login_path) end

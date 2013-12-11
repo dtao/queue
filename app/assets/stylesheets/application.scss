@@ -1,0 +1,50 @@
+@import "foundation_and_overrides";
+
+body {
+  & > header,
+  & > main {
+    @include grid-row();
+  }
+
+  & > header > h1 {
+    @include grid-column(12);
+  }
+
+  & > main > nav {
+    @include grid-column(3);
+
+    ul {
+      @include side-nav();
+    }
+  }
+
+  & > main > #content {
+    @include grid-column(9);
+  }
+}
+
+form {
+  input[type="submit"] {
+    @include button($padding: $button-sml, $is-input: true);
+  }
+}
+
+#notice {
+  @include grid-row();
+
+  &.success {
+    @include alert($success-color);
+  }
+
+  &.info {
+    @include alert();
+  }
+
+  &.error {
+    @include alert($alert-color);
+  }
+
+  &:empty {
+    display: none;
+  }
+}

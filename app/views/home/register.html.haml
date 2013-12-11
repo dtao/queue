@@ -1,0 +1,10 @@
+= form_tag(register_path) do
+  = form_field(:name)
+  = form_field(:email)
+  = form_field(:password, :password)
+  = form_field(:password_confirmation, :password)
+  = form_submit('Register')
+
+%p
+  Already have an account?
+  = link_to('Log in', login_path)
