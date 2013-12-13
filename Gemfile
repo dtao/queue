@@ -39,6 +39,9 @@ gem 'jbuilder', '~> 1.2'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+# Oh look, somebody else already did this for me
+gem 'email_validator'
+
 # Use strip_attributes to get rid of leading and trailing space
 gem 'strip_attributes'
 

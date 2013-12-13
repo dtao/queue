@@ -38,6 +38,8 @@ GEM
     coffee-script-source (1.6.3)
     diff-lcs (1.2.5)
     dotenv (0.9.0)
+    email_validator (1.4.0)
+      activemodel
     erubis (2.7.0)
     execjs (2.0.2)
     foreman (0.63.0)
@@ -154,6 +156,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby (~> 3.1.2)
   coffee-rails (~> 4.0.0)
+  email_validator
   foreman
   foundation-rails
   haml-rails

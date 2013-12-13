@@ -18,6 +18,13 @@ describe User do
     expect_error_from { create_user(:email => nil) }
   end
 
+  it 'requires a valid-looking e-mail address' do
+    expect_error_from { create_user(:email => 'foo') }
+    expect_error_from { create_user(:email => 'foo@') }
+    expect_error_from { create_user(:email => '@bar.com') }
+    expect_error_from { create_user(:email => 'this is an invalid@e-mail address') }
+  end
+
   it 'requires password and password confirmation to match' do
     expect_error_from { create_user(:password_confirmation => 'foo') }
   end
