@@ -53,6 +53,9 @@ gem 'email_validator'
 # Use strip_attributes to get rid of leading and trailing space
 gem 'strip_attributes'
 
+# Display user profile images
+gem 'gravatar_image_tag'
+
 # Use unicorn as the app server
 gem 'unicorn'
 

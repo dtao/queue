@@ -1,5 +1,8 @@
-<p>Welcome to <%= APP_NAME %>.</p>
-
 <% if !logged_in? %>
   <p><%= link_to('Log in', login_path) %> to continue.</p>
+<% else %>
+  <p>
+    <%= gravatar_image_tag(current_user.email) %>
+    Welcome, <%= current_user.name %>!
+  </p>
 <% end %>
