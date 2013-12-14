@@ -2,22 +2,22 @@ development:
   adapter: postgresql
   encoding: unicode
   host: localhost
-  database: app_development
-  username: app
+  database: station_development
+  username: station
   password: passw0rd
 
 test:
   adapter: postgresql
   encoding: unicode
   host: localhost
-  database: app_test
-  username: app
+  database: station_test
+  username: station
   password: passw0rd
 
 production:
   adapter: postgresql
   encoding: unicode
   host: localhost
-  database: app_production
-  username: app
+  database: station_production
+  username: station
   password: passw0rd
