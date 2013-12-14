@@ -3,6 +3,13 @@
   = form_field(:password, :password)
   = form_submit('Log in')
 
+%p Or log in with:
+
+%ul
+  %li= link_to('Google', '/auth/google_oauth2')
+  %li= link_to('Facebook', '/auth/facebook')
+  %li= link_to('GitHub', '/auth/github')
+
 %p
   Need to create an account?
   = link_to('Register', register_path)

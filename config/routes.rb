@@ -5,4 +5,6 @@ Station::Application.routes.draw do
   match '/login'    => 'home#login', :via => [:get, :post]
   match '/register' => 'home#register', :via => [:get, :post]
   match '/logout'   => 'home#logout', :via => [:get, :post]
+
+  get   '/auth/:provider/callback' => 'auth#callback'
 end

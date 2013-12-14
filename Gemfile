@@ -39,6 +39,14 @@ gem 'jbuilder', '~> 1.2'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+# ...but also use OAuth, for users who roll like that
+gem 'omniauth'
+
+# Uncomment any of these you want to use
+# gem 'omniauth-google-oauth2'
+# gem 'omniauth-facebook'
+# gem 'omniauth-github'
+
 # Oh look, somebody else already did this for me
 gem 'email_validator'
 

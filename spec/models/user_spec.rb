@@ -14,8 +14,9 @@ describe User do
     expect_error_from { create_user(:name => nil) }
   end
 
-  it 'requires an e-mail address' do
-    expect_error_from { create_user(:email => nil) }
+  it 'does not allow two users to have the same e-mail address' do
+    create_user(:email => 'joe@example.com')
+    expect_error_from { create_user(:email => 'joe@example.com') }
   end
 
   it 'requires a valid-looking e-mail address' do
