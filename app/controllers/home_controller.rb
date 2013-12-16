@@ -1,10 +1,4 @@
 class HomeController < ApplicationController
-  def about
-    renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-    readme_text = File.read(File.join(Rails.root, 'README.md'))
-    @about = renderer.render(readme_text)
-  end
-
   def login
     if request.post?
       user = User.find_by(:email => params[:email])
