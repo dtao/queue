@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131213183847) do
+ActiveRecord::Schema.define(version: 20131216151742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,17 +27,17 @@ ActiveRecord::Schema.define(version: 20131213183847) do
   add_index "identities", ["provider", "uid"], name: "index_identities_on_provider_and_uid", using: :btree
   add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
 
-  create_table "messages", force: true do |t|
-    t.string   "sender_email",    null: false
-    t.string   "recipient_email", null: false
-    t.string   "subject"
-    t.text     "body"
+  create_table "tasks", force: true do |t|
+    t.integer  "user_id",      null: false
+    t.string   "description",  null: false
+    t.text     "comments"
+    t.datetime "completed_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "messages", ["recipient_email"], name: "index_messages_on_recipient_email", using: :btree
-  add_index "messages", ["sender_email"], name: "index_messages_on_sender_email", using: :btree
+  add_index "tasks", ["completed_at"], name: "index_tasks_on_completed_at", using: :btree
+  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name",            null: false

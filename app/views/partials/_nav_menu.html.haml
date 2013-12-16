@@ -1,4 +1,5 @@
 %nav
   %ul
     = nav_link('Home', root_path)
+    = nav_link('Next Task', tasks_path)
     = if logged_in? then nav_link('Log out', logout_path) else nav_link('Log in', login_path) end

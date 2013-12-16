@@ -1,0 +1,15 @@
+<%= form_for(@task) do |f| %>
+  <div class="field">
+    <%= f.label(:description) %>
+    <%= f.text_field(:description) %>
+  </div>
+
+  <div class="field">
+    <%= f.label(:comments) %>
+    <%= f.text_area(:comments) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
