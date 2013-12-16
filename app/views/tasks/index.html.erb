@@ -4,18 +4,20 @@
   <p><%= @task.comments %>
 <% end %>
 
-<p>
-  <%= form_tag(complete_task_path(@task)) do %>
-    <div class="actions">
-      <%= submit_tag('Complete') %>
-    </div>
-  <% end %>
+<% if @task.present? %>
+  <p>
+    <%= form_tag(complete_task_path(@task)) do %>
+      <div class="actions">
+        <%= submit_tag('Complete') %>
+      </div>
+    <% end %>
 
-  <%= form_tag(pass_task_path(@task)) do %>
-    <div class="actions">
-      <%= submit_tag('Put it off') %>
-    </div>
-  <% end %>
-</p>
+    <%= form_tag(pass_task_path(@task)) do %>
+      <div class="actions">
+        <%= submit_tag('Put it off') %>
+      </div>
+    <% end %>
+  </p>
+<% end %>
 
 <p><%= link_to('Create a new task', new_task_path) %></p>
